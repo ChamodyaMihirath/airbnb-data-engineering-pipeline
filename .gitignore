@@ -1,0 +1,23 @@
+# Data files — never commit these
+data/raw/
+data/processed/
+data/database/
+*.duckdb
+*.parquet
+*.gz
+*.csv
+
+# Logs
+logs/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
