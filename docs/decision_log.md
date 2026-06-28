@@ -456,5 +456,19 @@ Storing metadata in the same database means one connection handles both analytic
 If the DuckDB database is corrupted (unlikely), metadata is lost along with the analytical tables. In production, metadata would be written to a separate monitoring system (Airflow, Prefect, Datadog) independent of the data store.
 
 ---
+### A-NEW — Master table missing data is intentional cascade
 
+All null values in master_listings.parquet fall into 4 groups:
+
+1. Price cascade (43.95%): 4,606 listings with no source price.
+   All price-derived columns (price_per_bedroom, revenue,
+   price_tier) inherit the same null. Not a bug.
+
+2. Host rates (23-36%): Hosts who chose to hide response/
+   acceptance rates on Airbnb. Kept as NaN — not 0%.
+
+3. Review fields (10.47%): 1,097 listings with no reviews.
+   All review metrics null — correct, not a gap.
+
+4. Operational (<4%): Minor scraping gaps. Acceptable.
 *This log covers all significant decisions made through June 2026. New entries will be added for EDA methodology choices, statistical test selection rationale, and ML model selection decisions.*
