@@ -1,34 +1,4 @@
-"""
-cleaner.py  —  Section 3.2: Data Cleaning & Standardization
-------------------------------------------------------------
-Orchestrator that coordinates all cleaning sub-modules:
 
-    standardizer.py      → price, dates, booleans, percentages, categoricals
-    missing_values.py    → missing value strategies per column
-    geo_cleaner.py       → coordinates, neighbourhood names, city field
-
-Pipeline per dataset:
-    1. Standardize       (standardizer.py)
-    2. Handle missing    (missing_values.py)
-    3. Clean geographic  (geo_cleaner.py)
-    4. Add validity flag (_is_valid)
-    5. Save to parquet
-
-Known data issues handled here (from profiling output):
-    - listings.price       : 43.95% null  → "$150.00" strings need parsing
-    - calendar.price       : 100% null    → same $ string issue
-    - adjusted_price       : 100% null    → dropped entirely
-    - minimum_nights       : max = 1001   → capped at 365
-    - maximum_nights       : max = 2,147,483,647 (INT_MAX sentinel) → NaN
-    - estimated_occupancy  : max = 255    → capped at 365
-    - neighbourhood        : >50% null    → use neighbourhood_cleansed instead
-
-Usage:
-    from cleaning.cleaner import DataCleaner
-    cleaner        = DataCleaner()
-    clean_datasets = cleaner.clean_all(datasets)
-    cleaner.save_cleaned(clean_datasets, output_path)
-"""
 
 import sys
 from pathlib import Path

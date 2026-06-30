@@ -1,28 +1,4 @@
-"""
-db.py  —  Section 3.4: Data Modeling & DuckDB Implementation
-------------------------------------------------------------
-Implements the star schema dimensional model in DuckDB.
 
-Star schema design:
-    fact_listings        — one row per listing (grain: listing)
-    fact_calendar        — one row per listing×date (grain: daily availability)
-    dim_host             — host attributes
-    dim_neighbourhood    — neighbourhood attributes + aggregates
-    dim_room_type        — room type and property type
-    dim_date             — date dimension for calendar
-
-Why star schema over 3NF:
-    Optimized for analytical GROUP BY queries (fewer JOINs).
-    Matches query patterns: "avg price by neighbourhood", "superhost vs non".
-    DuckDB's columnar storage benefits from denormalized fact tables.
-    Trade-off: some redundancy acceptable for this dataset size.
-
-Usage:
-    from database.db import DatabaseManager
-    db = DatabaseManager(db_path)
-    db.load_all(master, calendar_clean)
-    db.build_star_schema()
-"""
 
 import duckdb
 import pandas as pd
