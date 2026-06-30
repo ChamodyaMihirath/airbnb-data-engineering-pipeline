@@ -64,6 +64,7 @@ and interactive geographic heatmaps.
                    ▼
      [ Streamlit Business Portal ] ───> Executive KPIs & Simulations
 ```
+<img width="1024" height="1024" alt="pipeline_diagram_1782802941497" src="https://github.com/user-attachments/assets/21f098d4-5be5-4557-acf3-1db31c8763d7" />
 
 ## 📂 Repository Structure
 ```text
