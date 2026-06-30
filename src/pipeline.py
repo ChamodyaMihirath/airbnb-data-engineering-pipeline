@@ -52,14 +52,18 @@ from database.db          import DatabaseManager
 # Configuration  (Section 3.5 — configurable for any city)
 # =============================================================
 
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
 CONFIG = {
     "city":        "amsterdam",
-    "data_path":   Path(r"D:\Expernetic\airbnb-data-engineering-pipeline\Data\raw\amsterdam"),
-    "output_path": Path(r"D:\Expernetic\airbnb-data-engineering-pipeline\Data\processed"),
-    "db_path":     r"D:\Expernetic\airbnb-data-engineering-pipeline\Data\database\airbnb_amsterdam.duckdb",
+    "data_path":   PROJECT_ROOT / "Data" / "raw" / "amsterdam",
+    "output_path": PROJECT_ROOT / "Data" / "processed",
+    "db_path":     str(PROJECT_ROOT / "Data" / "database" / "airbnb_amsterdam.duckdb"),
     "max_retries": 3,
     "retry_delay": 2,   # seconds between retries
 }
+
+CONFIG["output_path"].mkdir(parents=True, exist_ok=True)
 
 
 # =============================================================
