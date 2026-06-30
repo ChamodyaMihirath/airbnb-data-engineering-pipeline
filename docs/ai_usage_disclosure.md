@@ -4,9 +4,7 @@
 
 **Project:** airbnb-data-engineering-pipeline
 
-**Candidate:** Chamodya Mihirath
 
-**Date:** June 2026
 
 ---
 
