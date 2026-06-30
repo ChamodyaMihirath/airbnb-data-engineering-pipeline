@@ -1,6 +1,6 @@
 # Assumptions Log
 ## Amsterdam Airbnb Market Intelligence
-## Expernetic Data Engineer Intern — Technical Assessment
+
 
 **City:** Amsterdam, Netherlands  
 **Data source:** Inside Airbnb (https://insideairbnb.com/get-the-data/)  
