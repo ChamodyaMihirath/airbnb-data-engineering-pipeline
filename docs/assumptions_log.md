@@ -272,3 +272,20 @@ to support future multi-city pipeline extension without schema changes.
 
 *This log is a living document. New entries are added as new assumptions
 are identified during EDA, statistical analysis, and modelling.*
+
+
+### DEC-018 — SHAP explainability performed on Random Forest, not XGBoost
+
+Context: XGBoost 3.2.0 and SHAP 0.49.1 have a known serialization
+incompatibility (base_score stored in UBJSON format not parsed by
+this SHAP version) causing TreeExplainer to fail.
+
+Decision: Use Random Forest for SHAP explainability instead.
+Random Forest achieved comparable cross-validation performance
+(MAE €62.5 vs XGBoost €57.5) and is fully compatible with SHAP's
+TreeExplainer.
+
+Trade-off accepted: Feature importance is shown for Random Forest
+rather than the marginally better-performing XGBoost model. The
+relative feature rankings are expected to be similar since both
+are tree-based models trained on the same feature set.
