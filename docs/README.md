@@ -219,6 +219,9 @@ Key verified assets include:
 <img width="1806" height="514" alt="fig_ml_data_overview" src="https://github.com/user-attachments/assets/fffd9b22-cc5f-490a-a4e8-2d07d391a2c0" />
 <img width="1803" height="1278" alt="fig_ml_residuals" src="https://github.com/user-attachments/assets/3de1d241-9647-444c-91a3-663305e72636" />
 
+## Dashboard View
+
+https://github.com/user-attachments/assets/34c502b9-ad34-4f3e-a4f3-5ad51e6fe71b
 
 
 
