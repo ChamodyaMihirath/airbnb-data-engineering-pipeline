@@ -1,3 +1,4 @@
+
 # 🏠 Airbnb Data Engineering & Market Intelligence Platform
 
 > An enterprise-grade, end-to-end Data Engineering, Advanced Analytics, Statistical Inference, Explainable Machine Learning, and Business Intelligence platform built upon the Amsterdam Airbnb ecosystem.
@@ -64,7 +65,7 @@ and interactive geographic heatmaps.
                    ▼
      [ Streamlit Business Portal ] ───> Executive KPIs & Simulations
 ```
-<img width="1024" height="1024" alt="pipeline_diagram_1782802941497" src="https://github.com/user-attachments/assets/21f098d4-5be5-4557-acf3-1db31c8763d7" />
+<img width="1536" height="1024" alt="ChatGPT Image Jul 4, 2026, 11_45_45 AM" src="https://github.com/user-attachments/assets/96007e15-1a40-48e3-a485-15221bba162c" />
 
 ## 📂 Repository Structure
 ```text
